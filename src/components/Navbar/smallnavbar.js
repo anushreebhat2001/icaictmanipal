@@ -38,20 +38,23 @@ const NavMenu = styled.ul `
 
 const Link = styled.a `
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 2.4vw;
     border-bottom: 0.1vw solid white;
     font-weight:600;
     &:active {
-        color: rgb(93, 166, 255);
+        border-bottom: 0.3vw solid rgb(183, 206, 250);
     }
-    &:visited {
+    &:link {
+        color: white;
+    }
+    &:active {
         color: white;
     }
     &:hover {
-        color: rgb(93, 166, 255);
-        opacity: 0.7;
+        color: rgb(145, 196, 255);
     }
+
 `;
 
 export function SmallNavbar () {
@@ -63,41 +66,35 @@ export function SmallNavbar () {
             <Nav>
             <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
             {isOpen && <NavMenu> Menu
-                <NavLink>
-                    <Link href="/">Home </Link>
+                <NavLink to="/">
+                    <Link>Home</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/#white">About </Link>
+                <NavLink to="/Committees">
+                <Link>Committees</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/Forum">Forum </Link>
+                <NavLink to="/CallforPapers">
+                <Link>Call for Papers</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/Academics">Academic </Link>
+                <NavLink to="/ImportantDates">
+                <Link>Important Dates</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/Faculty">Faculty </Link>
+                <NavLink to="/Keynote">
+                <Link>Keynote</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/News">News </Link>
+                <NavLink to="/AcceptedPapers">
+                <Link>Accepted Papers</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/Events">Events </Link>
+                <NavLink to="/Registration">
+                <Link>Registration</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/research">Research </Link>
+                <NavLink to="/Publication">
+                <Link>Publications</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/qp">Question Papers </Link> 
+                <NavLink to="/Downloads">
+                <Link>Downloads</Link>
                 </NavLink>
-                <NavLink>
-                    <Link href="/placements">Placements </Link>
-                </NavLink>
-                <NavLink>
-                    <Link href="/contact">Contacts</Link>
-                </NavLink>
-                <NavLink>
-                    <Link href="/Facilities">Facilities</Link>
+                <NavLink to="/Partners">
+                <Link>Partners</Link>
                 </NavLink>
             </NavMenu> }
            </Nav>
